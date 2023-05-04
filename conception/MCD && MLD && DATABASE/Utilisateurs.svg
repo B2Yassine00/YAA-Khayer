@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="497" height="749" viewBox="0 0 497 749" xmlns="http://www.w3.org/2000/svg">
+<rect id="frame" x="0" y="0" width="497" height="749" fill="#f5f5f5" stroke="none" stroke-width="0"/>
+
+<!-- Association Donner -->
+<g class="page_0_vZmmjaBF diagram_page" visibility="visible">
+	<line x1="57" y1="143" x2="57" y2="51" stroke="#35978f" stroke-width="2"/>
+	<text x="62" y="110" fill="#8c510a" font-family="Verdana" font-size="12">0,N</text>
+	<line x1="196" y1="51" x2="57" y2="51" stroke="#35978f" stroke-width="2"/>
+	<text x="122" y="68" fill="#8c510a" font-family="Verdana" font-size="12">0,N</text>
+	<g>
+		<path d="M73 26 a14 14 90 0 1 14 14 V51 h-60 V40 a14 14 90 0 1 14 -14" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<path d="M87 51 v11 a14 14 90 0 1 -14 14 H41 a14 14 90 0 1 -14 -14 V51 H60" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="27" y="26" width="60" height="50" fill="none" rx="14" stroke="#35978f" stroke-width="2"/>
+		<line x1="27" y1="51" x2="87" y2="51" stroke="#35978f" stroke-width="1"/>
+		<text x="35" y="43.75" fill="#000" font-family="Verdana" font-size="12">Donner</text>
+	</g>
+</g>
+
+<!-- Association Créer -->
+<g class="page_0_vZmmjaBF diagram_page" visibility="visible">
+	<line x1="440" y1="252" x2="329" y2="51" stroke="#35978f" stroke-width="2"/>
+	<text x="408.12" y="185" fill="#8c510a" font-family="Verdana" font-size="12">0,N</text>
+	<line x1="196" y1="51" x2="329" y2="51" stroke="#35978f" stroke-width="2"/>
+	<text x="248" y="68" fill="#8c510a" font-family="Verdana" font-size="12">1,1</text>
+	<g>
+		<path d="M339 26 a14 14 90 0 1 14 14 V51 h-48 V40 a14 14 90 0 1 14 -14" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<path d="M353 51 v11 a14 14 90 0 1 -14 14 H319 a14 14 90 0 1 -14 -14 V51 H48" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="305" y="26" width="48" height="50" fill="none" rx="14" stroke="#35978f" stroke-width="2"/>
+		<line x1="305" y1="51" x2="353" y2="51" stroke="#35978f" stroke-width="1"/>
+		<text x="312" y="43.75" fill="#000" font-family="Verdana" font-size="12">Créer</text>
+	</g>
+</g>
+
+<!-- Association Poser -->
+<g class="page_0_vZmmjaBF diagram_page" visibility="visible">
+	<line x1="57" y1="143" x2="196" y2="143" stroke="#35978f" stroke-width="2"/>
+	<text x="101" y="160" fill="#8c510a" font-family="Verdana" font-size="12">0,N</text>
+	<line x1="329" y1="143" x2="196" y2="143" stroke="#35978f" stroke-width="2"/>
+	<text x="272" y="160" fill="#8c510a" font-family="Verdana" font-size="12">1,1</text>
+	<g>
+		<path d="M206 118 a14 14 90 0 1 14 14 V143 h-48 V132 a14 14 90 0 1 14 -14" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<path d="M220 143 v11 a14 14 90 0 1 -14 14 H186 a14 14 90 0 1 -14 -14 V143 H48" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="172" y="118" width="48" height="50" fill="none" rx="14" stroke="#35978f" stroke-width="2"/>
+		<line x1="172" y1="143" x2="220" y2="143" stroke="#35978f" stroke-width="1"/>
+		<text x="179" y="135.75" fill="#000" font-family="Verdana" font-size="12">Poser</text>
+	</g>
+</g>
+
+<!-- Association est_un2 -->
+<g class="page_0_vZmmjaBF diagram_page" visibility="visible">
+	<line x1="57" y1="143" x2="57" y2="252" stroke="#35978f" stroke-width="2"/>
+	<text x="62" y="185" fill="#8c510a" font-family="Verdana" font-size="12">1,1</text>
+	<line x1="196" y1="252" x2="57" y2="252" stroke="#35978f" stroke-width="2"/>
+	<text x="125" y="244" fill="#8c510a" font-family="Verdana" font-size="12">0,1</text>
+	<g>
+		<path d="M71 227 a14 14 90 0 1 14 14 V252 h-56 V241 a14 14 90 0 1 14 -14" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<path d="M85 252 v11 a14 14 90 0 1 -14 14 H43 a14 14 90 0 1 -14 -14 V252 H56" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="29" y="227" width="56" height="50" fill="none" rx="14" stroke="#35978f" stroke-width="2"/>
+		<line x1="29" y1="252" x2="85" y2="252" stroke="#35978f" stroke-width="1"/>
+		<text x="36" y="244.75" fill="#000" font-family="Verdana" font-size="12">est_un</text>
+	</g>
+</g>
+
+<!-- Association Prendre -->
+<g class="page_0_vZmmjaBF diagram_page" visibility="visible">
+	<line x1="440" y1="252" x2="329" y2="252" stroke="#35978f" stroke-width="2"/>
+	<text x="365" y="269" fill="#8c510a" font-family="Verdana" font-size="12">0,N</text>
+	<line x1="329" y1="143" x2="329" y2="252" stroke="#35978f" stroke-width="2"/>
+	<text x="334" y="202" fill="#8c510a" font-family="Verdana" font-size="12">1,1</text>
+	<g>
+		<path d="M346 227 a14 14 90 0 1 14 14 V252 h-62 V241 a14 14 90 0 1 14 -14" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<path d="M360 252 v11 a14 14 90 0 1 -14 14 H312 a14 14 90 0 1 -14 -14 V252 H62" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="298" y="227" width="62" height="50" fill="none" rx="14" stroke="#35978f" stroke-width="2"/>
+		<line x1="298" y1="252" x2="360" y2="252" stroke="#35978f" stroke-width="1"/>
+		<text x="305" y="244.75" fill="#000" font-family="Verdana" font-size="12">Prendre</text>
+	</g>
+</g>
+
+<!-- Association se_notifier -->
+<g class="page_0_vZmmjaBF diagram_page" visibility="visible">
+	<line x1="57" y1="462" x2="57" y2="361" stroke="#35978f" stroke-width="2"/>
+	<text x="62" y="403" fill="#8c510a" font-family="Verdana" font-size="12">1,1</text>
+	<line x1="196" y1="252" x2="57" y2="361" stroke="#35978f" stroke-width="2"/>
+	<text x="124" y="285.16" fill="#8c510a" font-family="Verdana" font-size="12">0,N</text>
+	<g>
+		<path d="M83 336 a14 14 90 0 1 14 14 V361 h-80 V350 a14 14 90 0 1 14 -14" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<path d="M97 361 v11 a14 14 90 0 1 -14 14 H31 a14 14 90 0 1 -14 -14 V361 H80" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="17" y="336" width="80" height="50" fill="none" rx="14" stroke="#35978f" stroke-width="2"/>
+		<line x1="17" y1="361" x2="97" y2="361" stroke="#35978f" stroke-width="1"/>
+		<text x="25" y="353.75" fill="#000" font-family="Verdana" font-size="12">se_notifier</text>
+	</g>
+</g>
+
+<!-- Association est_un1 -->
+<g class="page_0_vZmmjaBF diagram_page" visibility="visible">
+	<line x1="440" y1="252" x2="196" y2="361" stroke="#35978f" stroke-width="2"/>
+	<text x="366" y="268.94" fill="#8c510a" font-family="Verdana" font-size="12">1,1</text>
+	<line x1="196" y1="252" x2="196" y2="361" stroke="#35978f" stroke-width="2"/>
+	<text x="201" y="328" fill="#8c510a" font-family="Verdana" font-size="12">0,1</text>
+	<g>
+		<path d="M210 336 a14 14 90 0 1 14 14 V361 h-56 V350 a14 14 90 0 1 14 -14" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<path d="M224 361 v11 a14 14 90 0 1 -14 14 H182 a14 14 90 0 1 -14 -14 V361 H56" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="168" y="336" width="56" height="50" fill="none" rx="14" stroke="#35978f" stroke-width="2"/>
+		<line x1="168" y1="361" x2="224" y2="361" stroke="#35978f" stroke-width="1"/>
+		<text x="175" y="353.75" fill="#000" font-family="Verdana" font-size="12">est_un</text>
+	</g>
+</g>
+
+<!-- Association commenter -->
+<g class="page_0_vZmmjaBF diagram_page" visibility="visible">
+	<line x1="196" y1="252" x2="329" y2="462" stroke="#35978f" stroke-width="2"/>
+	<text x="211.25" y="328" fill="#8c510a" font-family="Verdana" font-size="12">0,N</text>
+	<line x1="196" y1="462" x2="329" y2="462" stroke="#35978f" stroke-width="2"/>
+	<text x="260" y="479" fill="#8c510a" font-family="Verdana" font-size="12">1,1</text>
+	<g>
+		<path d="M357 437 a14 14 90 0 1 14 14 V462 h-84 V451 a14 14 90 0 1 14 -14" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<path d="M371 462 v11 a14 14 90 0 1 -14 14 H301 a14 14 90 0 1 -14 -14 V462 H84" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="287" y="437" width="84" height="50" fill="none" rx="14" stroke="#35978f" stroke-width="2"/>
+		<line x1="287" y1="462" x2="371" y2="462" stroke="#35978f" stroke-width="1"/>
+		<text x="294" y="454.75" fill="#000" font-family="Verdana" font-size="12">commenter</text>
+	</g>
+</g>
+
+<!-- Association commente -->
+<g class="page_0_vZmmjaBF diagram_page" visibility="visible">
+	<line x1="196" y1="462" x2="196" y2="554" stroke="#35978f" stroke-width="2"/>
+	<text x="201" y="521" fill="#8c510a" font-family="Verdana" font-size="12">1,1</text>
+	<line x1="196" y1="672" x2="196" y2="554" stroke="#35978f" stroke-width="2"/>
+	<text x="201" y="596" fill="#8c510a" font-family="Verdana" font-size="12">0,N</text>
+	<g>
+		<path d="M222 529 a14 14 90 0 1 14 14 V554 h-80 V543 a14 14 90 0 1 14 -14" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+		<path d="M236 554 v11 a14 14 90 0 1 -14 14 H170 a14 14 90 0 1 -14 -14 V554 H80" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+		<rect x="156" y="529" width="80" height="50" fill="none" rx="14" stroke="#35978f" stroke-width="2"/>
+		<line x1="156" y1="554" x2="236" y2="554" stroke="#35978f" stroke-width="1"/>
+		<text x="164" y="546.75" fill="#000" font-family="Verdana" font-size="12">commente</text>
+	</g>
+</g>
+
+<!-- Entity Compagne -->
+<g class="page_0_vZmmjaBF diagram_page" visibility="visible">
+	<g>
+		<rect x="149" y="9" width="94" height="25" fill="#dfc27d" stroke="#dfc27d" stroke-width="0" opacity="1"/>
+		<rect x="149" y="34" width="94" height="59" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0" opacity="1"/>
+		<rect x="149" y="9" width="94" height="84" fill="none" stroke="#bf812d" stroke-width="2" opacity="1"/>
+		<line x1="149" y1="34" x2="243" y2="34" stroke="#bf812d" stroke-width="1"/>
+	</g>
+	<text x="164" y="26.75" fill="#000" font-family="Verdana" font-size="12">Compagne</text>
+	<text x="154" y="51.8" fill="#000" font-family="Verdana" font-size="12">id_compagnw</text>
+	<line x1="154" y1="54" x2="238" y2="54" stroke="#000" stroke-width="1"/>
+	<text x="154" y="68.8" fill="#000" font-family="Verdana" font-size="12">montant</text>
+	<text x="154" y="85.8" fill="#000" font-family="Verdana" font-size="12">date_colture</text>
+</g>
+
+<!-- Entity Individu -->
+<g class="page_0_vZmmjaBF diagram_page" visibility="visible">
+	<g>
+		<rect x="18" y="118" width="78" height="25" fill="#dfc27d" stroke="#dfc27d" stroke-width="0" opacity="1"/>
+		<rect x="18" y="143" width="78" height="25" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0" opacity="1"/>
+		<rect x="18" y="118" width="78" height="50" fill="none" stroke="#bf812d" stroke-width="2" opacity="1"/>
+		<line x1="18" y1="143" x2="96" y2="143" stroke="#bf812d" stroke-width="1"/>
+	</g>
+	<text x="32" y="135.75" fill="#000" font-family="Verdana" font-size="12">Individu</text>
+	<text x="23" y="160.8" fill="#000" font-family="Verdana" font-size="12">id_individu</text>
+	<line x1="23" y1="163" x2="90" y2="163" stroke="#000" stroke-width="1"/>
+</g>
+
+<!-- Entity Offert -->
+<g class="page_0_vZmmjaBF diagram_page" visibility="visible">
+	<g>
+		<rect x="298" y="101" width="62" height="25" fill="#dfc27d" stroke="#dfc27d" stroke-width="0" opacity="1"/>
+		<rect x="298" y="126" width="62" height="59" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0" opacity="1"/>
+		<rect x="298" y="101" width="62" height="84" fill="none" stroke="#bf812d" stroke-width="2" opacity="1"/>
+		<line x1="298" y1="126" x2="360" y2="126" stroke="#bf812d" stroke-width="1"/>
+	</g>
+	<text x="311" y="118.75" fill="#000" font-family="Verdana" font-size="12">Offert</text>
+	<text x="303" y="143.8" fill="#000" font-family="Verdana" font-size="12">id_offert</text>
+	<line x1="303" y1="146" x2="355" y2="146" stroke="#000" stroke-width="1"/>
+	<text x="303" y="160.8" fill="#000" font-family="Verdana" font-size="12">quantite</text>
+	<text x="303" y="177.8" fill="#000" font-family="Verdana" font-size="12">type</text>
+</g>
+
+<!-- Entity Utilisateur -->
+<g class="page_0_vZmmjaBF diagram_page" visibility="visible">
+	<g>
+		<rect x="151" y="193" width="90" height="25" fill="#dfc27d" stroke="#dfc27d" stroke-width="0" opacity="1"/>
+		<rect x="151" y="218" width="90" height="93" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0" opacity="1"/>
+		<rect x="151" y="193" width="90" height="118" fill="none" stroke="#bf812d" stroke-width="2" opacity="1"/>
+		<line x1="151" y1="218" x2="241" y2="218" stroke="#bf812d" stroke-width="1"/>
+	</g>
+	<text x="165" y="210.75" fill="#000" font-family="Verdana" font-size="12">Utilisateur</text>
+	<text x="156" y="235.8" fill="#000" font-family="Verdana" font-size="12">id_utilisateur</text>
+	<line x1="156" y1="238" x2="236" y2="238" stroke="#000" stroke-width="1"/>
+	<text x="156" y="252.8" fill="#000" font-family="Verdana" font-size="12">name</text>
+	<text x="156" y="269.8" fill="#000" font-family="Verdana" font-size="12">password</text>
+	<text x="156" y="286.8" fill="#000" font-family="Verdana" font-size="12">email</text>
+	<text x="156" y="303.8" fill="#000" font-family="Verdana" font-size="12">numero</text>
+</g>
+
+<!-- Entity Association -->
+<g class="page_0_vZmmjaBF diagram_page" visibility="visible">
+	<g>
+		<rect x="392" y="193" width="96" height="25" fill="#dfc27d" stroke="#dfc27d" stroke-width="0" opacity="1"/>
+		<rect x="392" y="218" width="96" height="93" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0" opacity="1"/>
+		<rect x="392" y="193" width="96" height="118" fill="none" stroke="#bf812d" stroke-width="2" opacity="1"/>
+		<line x1="392" y1="218" x2="488" y2="218" stroke="#bf812d" stroke-width="1"/>
+	</g>
+	<text x="406" y="210.75" fill="#000" font-family="Verdana" font-size="12">Association</text>
+	<text x="397" y="235.8" fill="#000" font-family="Verdana" font-size="12">id_association</text>
+	<line x1="397" y1="238" x2="483" y2="238" stroke="#000" stroke-width="1"/>
+	<text x="397" y="252.8" fill="#000" font-family="Verdana" font-size="12">type</text>
+	<text x="397" y="269.8" fill="#000" font-family="Verdana" font-size="12">adresse</text>
+	<text x="397" y="286.8" fill="#000" font-family="Verdana" font-size="12">justificatifs</text>
+	<text x="397" y="303.8" fill="#000" font-family="Verdana" font-size="12">image</text>
+</g>
+
+<!-- Entity Notification -->
+<g class="page_0_vZmmjaBF diagram_page" visibility="visible">
+	<g>
+		<rect x="9" y="411" width="96" height="25" fill="#dfc27d" stroke="#dfc27d" stroke-width="0" opacity="1"/>
+		<rect x="9" y="436" width="96" height="77" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0" opacity="1"/>
+		<rect x="9" y="411" width="96" height="102" fill="none" stroke="#bf812d" stroke-width="2" opacity="1"/>
+		<line x1="9" y1="436" x2="105" y2="436" stroke="#bf812d" stroke-width="1"/>
+	</g>
+	<text x="23" y="428.75" fill="#000" font-family="Verdana" font-size="12">Notification</text>
+	<text x="14" y="453.8" fill="#000" font-family="Verdana" font-size="12">id_notification</text>
+	<line x1="14" y1="456" x2="100" y2="456" stroke="#000" stroke-width="1"/>
+	<text x="14" y="470.8" fill="#000" font-family="Verdana" font-size="12">contenu</text>
+	<text x="14" y="487.8" fill="#000" font-family="Verdana" font-size="12">date_envoi</text>
+	<text x="14" y="504.8" fill="#000" font-family="Verdana" font-size="12">checked</text>
+</g>
+
+<!-- Entity Commentaire -->
+<g class="page_0_vZmmjaBF diagram_page" visibility="visible">
+	<g>
+		<rect x="137" y="420" width="118" height="25" fill="#dfc27d" stroke="#dfc27d" stroke-width="0" opacity="1"/>
+		<rect x="137" y="445" width="118" height="59" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0" opacity="1"/>
+		<rect x="137" y="420" width="118" height="84" fill="none" stroke="#bf812d" stroke-width="2" opacity="1"/>
+		<line x1="137" y1="445" x2="255" y2="445" stroke="#bf812d" stroke-width="1"/>
+	</g>
+	<text x="155" y="437.75" fill="#000" font-family="Verdana" font-size="12">Commentaire</text>
+	<text x="142" y="462.8" fill="#000" font-family="Verdana" font-size="12">id_commenataire</text>
+	<line x1="142" y1="465" x2="248" y2="465" stroke="#000" stroke-width="1"/>
+	<text x="142" y="479.8" fill="#000" font-family="Verdana" font-size="12">contenu</text>
+	<text x="142" y="496.8" fill="#000" font-family="Verdana" font-size="12">date_puublication</text>
+</g>
+
+<!-- Entity Don -->
+<g class="page_0_vZmmjaBF diagram_page" visibility="visible">
+	<g>
+		<rect x="140" y="604" width="112" height="25" fill="#dfc27d" stroke="#dfc27d" stroke-width="0" opacity="1"/>
+		<rect x="140" y="629" width="112" height="111" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0" opacity="1"/>
+		<rect x="140" y="604" width="112" height="136" fill="none" stroke="#bf812d" stroke-width="2" opacity="1"/>
+		<line x1="140" y1="629" x2="252" y2="629" stroke="#bf812d" stroke-width="1"/>
+	</g>
+	<text x="184" y="621.75" fill="#000" font-family="Verdana" font-size="12">Don</text>
+	<text x="145" y="646.8" fill="#000" font-family="Verdana" font-size="12">id_don</text>
+	<line x1="145" y1="649" x2="187" y2="649" stroke="#000" stroke-width="1"/>
+	<text x="145" y="663.8" fill="#000" font-family="Verdana" font-size="12">titre</text>
+	<text x="145" y="680.8" fill="#000" font-family="Verdana" font-size="12">description</text>
+	<text x="145" y="697.8" fill="#000" font-family="Verdana" font-size="12">image</text>
+	<text x="145" y="714.8" fill="#000" font-family="Verdana" font-size="12">date_publication</text>
+	<text x="145" y="731.8" fill="#000" font-family="Verdana" font-size="12">etat</text>
+</g>
+</svg>

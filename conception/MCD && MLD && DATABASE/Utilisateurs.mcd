@@ -1,0 +1,34 @@
+Donner, 0N Individu, 0N Compagne
+Compagne:id_compagnw,montant,date_colture
+Créer, 0N Association, 11 Compagne
+:
+
+Individu: id_individu
+Poser, 0N Individu, 11 Offert
+Offert:id_offert,quantite,type
+:
+
+est_un2,11 Individu,01 Utilisateur
+Utilisateur: id_utilisateur,name,password,email,numero
+Prendre, 0N Association, 11 Offert
+Association: id_association,type,adresse,justificatifs,image
+
+se_notifier,11 Notification,0N Utilisateur
+est_un1, 11 Association,01 Utilisateur
+:
+:
+
+Notification: id_notification,contenu,date_envoi,checked
+Commentaire: id_commenataire,contenu,date_puublication
+commenter,0N Utilisateur,11 Commentaire
+:
+
+:
+commente,11 Commentaire, 0N Don
+:
+:
+
+:
+Don:id_don,titre,description,image,date_publication,etat
+:
+:

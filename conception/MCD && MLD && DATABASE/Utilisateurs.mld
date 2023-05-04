@@ -1,0 +1,34 @@
+%%mocodo
+:
+Donner: #id_individu->Individu->id_individu, _#id_compagnw->Compagne->id_compagnw
+:
+Compagne: id_compagnw, montant, date_colture, #id_association->Association->id_association
+:::::
+
+
+:
+Individu: id_individu, #id_utilisateur->Utilisateur->id_utilisateur
+:::
+Offert: id_offert, quantite, type, #id_individu->Individu->id_individu, #id_association->Association->id_association
+:::
+
+
+:::
+Utilisateur: id_utilisateur, name, password, email, numero
+:::
+Association: id_association, type, adresse, justificatifs, image, #id_utilisateur->Utilisateur->id_utilisateur
+:
+
+
+
+:
+Notification: id_notification, contenu, date_envoi, checked, #id_utilisateur->Utilisateur->id_utilisateur
+:
+Commentaire: id_commenataire, contenu, date_puublication, #id_utilisateur->Utilisateur->id_utilisateur, #id_don->Don->id_don
+:::::
+
+
+
+:::
+Don: id_don, titre, description, image, date_publication, etat
+:::::
