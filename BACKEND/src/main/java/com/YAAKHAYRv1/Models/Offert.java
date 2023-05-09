@@ -14,6 +14,7 @@ import jakarta.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @Entity
 @Table(
@@ -30,7 +31,6 @@ public class Offert extends Don implements Serializable {
             fetch = FetchType.LAZY
     )
     private List<Prendre> prendres;
-
     public Offert() {
     }
 
