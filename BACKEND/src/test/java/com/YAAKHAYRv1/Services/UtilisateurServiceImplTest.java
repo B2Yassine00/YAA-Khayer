@@ -11,7 +11,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-@RunWith(SpringRunner.class)
 @SpringBootTest
 class UtilisateurServiceImplTest {
 
@@ -25,6 +24,7 @@ class UtilisateurServiceImplTest {
     @Test
     void save() {
         UtilisateurRequestDao utilisateur=new UtilisateurRequestDao("imad","imad","imad@gmail.com","0606060606");
+
         UtilisateurResponseDao utilisateurResponseDao=utilisateurService.save(utilisateur);
         assertNotNull(utilisateurResponseDao);
         assertNotNull(utilisateurResponseDao.getId());
@@ -65,7 +65,7 @@ class UtilisateurServiceImplTest {
     }
     @Test
     void delet(){
-        utilisateurService.delete(6);
+        utilisateurService.delete(3);
         UtilisateurResponseDao utilisateur=utilisateurService.findById(6);
         assertEquals(null,utilisateur);
     }
