@@ -7,9 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DonnerResponse {
-    private int id_donner;
-    private int id_donneur;
-    private int id_compagne;
-    private double montant;
+public class PrendreRequest {
+    private int id_association;
+    private int id_offert;
+    private int quantite;
 }

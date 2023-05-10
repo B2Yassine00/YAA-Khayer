@@ -4,12 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DonnerResponse {
-    private int id_donner;
-    private int id_donneur;
-    private int id_compagne;
-    private double montant;
+@Data
+public class PrendreRespondre {
+    private int id_prendre;
+    private int id_association;
+    private int id_offert;
+    private int quantite;
 }

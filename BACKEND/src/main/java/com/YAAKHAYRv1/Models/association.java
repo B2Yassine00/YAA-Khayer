@@ -28,12 +28,7 @@ public class association extends Utilisateur implements Serializable {
             fetch = FetchType.LAZY
     )
     private List<Compagne> compagnes;
-    @OneToMany(
-            mappedBy = "association",
-            cascade = {CascadeType.ALL},
-            fetch = FetchType.LAZY
-    )
-    private List<Prendre> prendres;
+
 
     public association() {
     }
@@ -90,13 +85,7 @@ public class association extends Utilisateur implements Serializable {
         this.compagnes = compagnes;
     }
 
-    public List<Prendre> getPrendres() {
-        return this.prendres;
-    }
 
-    public void setPrendres(List<Prendre> prendres) {
-        this.prendres = prendres;
-    }
 
     public void setImage(String image) {
         this.image = image;

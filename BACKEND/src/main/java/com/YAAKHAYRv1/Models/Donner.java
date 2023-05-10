@@ -2,69 +2,26 @@
 
 package com.YAAKHAYRv1.Models;
 
-import jakarta.persistence.EmbeddedId;
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.MapsId;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import net.minidev.json.annotate.JsonIgnore;
 
 @Entity
 @Table(
         name = "donner"
 )
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class Donner {
-    @EmbeddedId
-    private Donnerkey id;
-    @ManyToOne
-    @MapsId("id_individu")
-    @JoinColumn(
-            name = "id_individu"
-    )
-    private Individu donneur;
-    @ManyToOne
-    @MapsId("id_compane")
-    @JoinColumn(
-            name = "id_compagne"
-    )
-    private Compagne compagne;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id_donner;
+    private int id_donneur;
+    private int id_compagne;
     private double montant;
 
-    public Donnerkey getId() {
-        return this.id;
-    }
-
-    public void setId(Donnerkey id) {
-        this.id = id;
-    }
-
-    public Donner(Individu donneur, Compagne compagne) {
-        this.donneur = donneur;
-        this.compagne = compagne;
-    }
-
-    public Individu getDonneur() {
-        return this.donneur;
-    }
-
-    public Donner() {
-    }
-
-    public Donner(Donnerkey id, Individu donneur, Compagne compagne) {
-        this.id = id;
-        this.donneur = donneur;
-        this.compagne = compagne;
-    }
-
-    public void setDonneur(Individu donneur) {
-        this.donneur = donneur;
-    }
-
-    public Compagne getCompagne() {
-        return this.compagne;
-    }
-
-    public void setCompagne(Compagne compagne) {
-        this.compagne = compagne;
-    }
 }

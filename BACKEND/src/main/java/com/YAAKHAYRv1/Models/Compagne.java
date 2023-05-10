@@ -11,6 +11,8 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import net.minidev.json.annotate.JsonIgnore;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -24,12 +26,6 @@ public class Compagne extends Don implements Serializable {
     private String date_colture;
     @ManyToOne
     private association association;
-    @OneToMany(
-            mappedBy = "compagne",
-            cascade = {CascadeType.ALL},
-            fetch = FetchType.LAZY
-    )
-    private List<Donner> donners;
 
     public Compagne() {
     }
@@ -40,14 +36,6 @@ public class Compagne extends Don implements Serializable {
 
     public void setAssociation(association association) {
         this.association = association;
-    }
-
-    public List<Donner> getDonners() {
-        return this.donners;
-    }
-
-    public void setDonners(List<Donner> donners) {
-        this.donners = donners;
     }
 
     public double getMontant() {
