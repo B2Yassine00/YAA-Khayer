@@ -16,4 +16,8 @@ import org.springframework.stereotype.Repository;
 public interface UtilisateurDao extends JpaRepository<Utilisateur, Integer> {
     @Query("select u from Utilisateur u where u.email=:email and u.password=:password")
     Optional<Utilisateur> findUtilisateurByLogin(@Param("email") String mail, @Param("password") String password);
+
+    @Query("select u from Utilisateur u where u.email=:email")
+    Optional<Utilisateur> findUtilisateurByEmail(@Param("email") String email);
+
 }
