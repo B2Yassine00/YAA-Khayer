@@ -7,6 +7,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import net.minidev.json.annotate.JsonIgnore;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -22,12 +24,7 @@ public class Individu extends Utilisateur implements Serializable {
             fetch = FetchType.LAZY
     )
     private List<Offert> offerts;
-    @OneToMany(
-            mappedBy = "donneur",
-            cascade = {CascadeType.ALL},
-            fetch = FetchType.LAZY
-    )
-    private List<Donner> donners;
+
 
     public Individu() {
     }
@@ -52,14 +49,6 @@ public class Individu extends Utilisateur implements Serializable {
 
     public void setOfferts(List<Offert> offerts) {
         this.offerts = offerts;
-    }
-
-    public List<Donner> getDonners() {
-        return this.donners;
-    }
-
-    public void setDonners(List<Donner> donners) {
-        this.donners = donners;
     }
 
     public void setInfos(String infos) {

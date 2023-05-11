@@ -8,6 +8,7 @@ package com.YAAKHAYRv1.Services;
 import com.YAAKHAYRv1.Dao.UtilisateurDao;
 import com.YAAKHAYRv1.Dto.UtilisateurRequestDao;
 import com.YAAKHAYRv1.Dto.UtilisateurResponseDao;
+import com.YAAKHAYRv1.Exception.EntityAlreadyExisitsException;
 import com.YAAKHAYRv1.Exception.EntityNotFoundException;
 import com.YAAKHAYRv1.Models.Utilisateur;
 import java.util.List;
@@ -27,9 +28,14 @@ public class UtilisateurServiceImpl implements UtilisateurService {
     }
 
     public UtilisateurResponseDao save(UtilisateurRequestDao utilisateur) {
+
+        Optional<Utilisateur> utilisateurexist=utilisateurDao.findUtilisateurByEmail(utilisateur.getEmail());
+        if(utilisateurexist.isPresent()){throw new EntityAlreadyExisitsException("utilistauer already exist");}
+        else{
+
         Utilisateur utilisateur1 = (Utilisateur)this.modelMapper.map(utilisateur, Utilisateur.class);
         Utilisateur saved = (Utilisateur)this.utilisateurDao.save(utilisateur1);
-        return (UtilisateurResponseDao)this.modelMapper.map(saved, UtilisateurResponseDao.class);
+        return (UtilisateurResponseDao)this.modelMapper.map(saved, UtilisateurResponseDao.class);}
     }
 
     public UtilisateurResponseDao findbylogin(String email, String password) {
@@ -37,7 +43,7 @@ public class UtilisateurServiceImpl implements UtilisateurService {
         if (utilisateur.isPresent()) {
             return (UtilisateurResponseDao)this.modelMapper.map(utilisateur, UtilisateurResponseDao.class);
         } else {
-            throw new EntityNotFoundException("utilistauer not found");
+            return  null;
         }
     }
 
@@ -46,7 +52,7 @@ public class UtilisateurServiceImpl implements UtilisateurService {
         if (utilisateur.isPresent()) {
             return (UtilisateurResponseDao)this.modelMapper.map(utilisateur, UtilisateurResponseDao.class);
         } else {
-            throw new EntityNotFoundException("utilistauer not found");
+                return null;
         }
     }
 
