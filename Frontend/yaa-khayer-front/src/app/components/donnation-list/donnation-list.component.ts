@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Donnation } from 'src/app/entities/donnation';
 import { DonnationService } from 'src/app/services/donnation.service';
 
@@ -9,15 +10,52 @@ import { DonnationService } from 'src/app/services/donnation.service';
 })
 export class DonnationListComponent implements OnInit{
 
+  currentCategoryId: number = 0 ;
+
   donnations: Donnation[] = [];
-  constructor(private donnationService: DonnationService){}
+
+  searchMode: boolean=false;
+  constructor(private donnationService: DonnationService,
+              private route: ActivatedRoute){}
 
   ngOnInit(): void {
-    this.listDonnations();
+    this.route.paramMap.subscribe(
+      () => {
+              this.listDonnations()
+            });
   }
 
   listDonnations(){
-    this.donnationService.getDonnationList().subscribe(
+    
+    this.searchMode = this.route.snapshot.paramMap.has('keyword');
+
+    if(this.searchMode){
+      const theKeyword: string = this.route.snapshot.paramMap.get('keyword')!;
+      
+      this.donnationService.searchDonnations(theKeyword).subscribe(
+        data => {
+          this.donnations = data;
+        }
+      )
+      this.searchMode=false;
+    }
+    else{
+      this.handleListDonnations();
+    }
+  }
+
+  handleListDonnations(){
+    //verifier si "id" est existant
+    const hasCategoryId: boolean = this.route.snapshot.paramMap.has('id');
+    if(hasCategoryId){
+
+      //get the id param
+      this.currentCategoryId=+this.route.snapshot.paramMap.get('id')!;
+    }else{
+      this.currentCategoryId = 0;
+    }
+     
+    this.donnationService.getDonnationList(this.currentCategoryId).subscribe(
       data =>{
         this.donnations = data;
       }

@@ -7,9 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'yaa-khayer-front';
-  showMenu = false;
-
-  OnChange(){   
-    this.showMenu = !this.showMenu;
-}
+  
 }

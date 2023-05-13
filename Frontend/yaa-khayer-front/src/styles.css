@@ -16,3 +16,6 @@
     @apply rounded-full py-2 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider ;
 }
 
+.btn-nav{
+    @apply p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-blue-600;
+}
