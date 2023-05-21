@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { RegisterResponse } from 'src/app/entities/register-response';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -10,6 +11,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class RegisterComponent implements OnInit {
   
   registerGroupForm!: FormGroup;
+  registerResponse!: RegisterResponse;
   isSuccessful = false;
   isSignUpFailed = false;
   errorMessage = ''
@@ -30,12 +32,10 @@ export class RegisterComponent implements OnInit {
   get password(){ return this.registerGroupForm.get('password');}
 
   onSubmit(){
-    console.log(this.registerGroupForm.value);
-    let username=String(this.username);
-    let email=this.email;
-    let password=this.password;
 
-    this.authService.register(String(username),String(email),String(password)).subscribe({
+    this.registerResponse = JSON.parse(JSON.stringify(this.registerGroupForm.value));
+
+    this.authService.register(this.registerResponse.username,this.registerResponse.email,this.registerResponse.password).subscribe({
       next: data => {
         console.log(data);
         this.isSuccessful = true;
