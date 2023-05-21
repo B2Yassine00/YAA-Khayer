@@ -45,6 +45,14 @@ export class DonnationService {
       map(
         response => response._embedded.donnations));
   }
+
+  getDonnation(DonnId: number): Observable<Donnation> {
+
+    const donnationUrl = `${this.baseUrl}/${DonnId}`;
+
+    return this.httpClient.get<Donnation>(donnationUrl);
+    
+  }
 }
 
 interface GetResponse{

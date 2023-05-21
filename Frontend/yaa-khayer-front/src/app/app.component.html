@@ -1,28 +1,20 @@
-<body class="text-gray-600 font-nunito">
-  <div class="grid md:grid-cols-6"> <!--content wrapper-->
+
+  <div class="grid md:grid-cols-6 bg-gray-100"> <!--content wrapper-->
 
     <app-sidebarnav></app-sidebarnav>
 
     <main class="px-16 pt-2 bg-gray-100 md:col-span-5">
 
-        <header class="grid place-content-center">
-            <h2  class="text-gray-700 text-6xl font-semibold">Donations</h2>
-            <h3  class="text-2xl font-semibold">For Charity Associations</h3>
-        </header>
-
         
-            <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">Latest Donations Announcement</h4>
             
             <router-outlet></router-outlet>
             <!-- <app-donnation-list></app-donnation-list> -->
         <!--<h4 class="font-bold mt-12 pb-2 border-b border-gray-200 mb-1">Most Popular</h4>-->
         
-        <div class="flex justify-center">
-            <div class="btn text-gray-600 bg-gray-200 hover:shadow-inner transform hover:scale-125 hover:mt-1 hover:bg-opacity-50 transition ease-out duration-300 mb-3">Load More</div>
-        </div>
+        
     </main>
 
 </div>
 
 
-</body>
+

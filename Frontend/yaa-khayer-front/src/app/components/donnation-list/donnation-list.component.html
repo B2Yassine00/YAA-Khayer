@@ -1,8 +1,17 @@
+<header class="grid place-content-center">
+    <h2  class="text-gray-700 text-6xl font-semibold">Donations</h2>
+    <h3  class="text-2xl font-semibold">For Charity Associations</h3>
+</header>
+
+
+    <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">Latest Donations Announcement</h4>
+
 <div class=" grid md:grid-cols-2 lg:grid-cols-3 gap-10"> 
     <div *ngFor="let TempDonnation of donnations">
         <div class="mt-8">
          <!-- Cards go here -->
             <div class="card hover:shadow-lg">
+                <a  routerLink="/donnations/{{TempDonnation.id}}">
                 <img src="assets/images/placeholder.jpg" class="w-full h-32 sm:h-48 object-cover">
                 <div class="m-4">
                     <span class="font-bold">{{TempDonnation.name}}</span>
@@ -15,10 +24,19 @@
                   
                     <span>{{TempDonnation.dateCreated}}</span>
                 </div>
+                </a>
             </div>
         </div>
 
     </div>
 
+    <div *ngIf="donnations?.length==0" class="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4 md:col-span-2 lg:col-span-3" role="alert">
+        <p class="font-bold">Not Found</p>
+        <p>We're sorry but the informations aren't disponible.</p>
+      </div>
 
+</div>
+
+<div class="flex justify-center">
+    <div class="btn text-gray-600 bg-gray-200 hover:shadow-inner transform hover:scale-125 hover:mt-1 hover:bg-opacity-50 transition ease-out duration-300 mb-3 mt-9">Load More</div>
 </div>

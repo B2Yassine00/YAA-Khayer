@@ -1,6 +1,7 @@
 export class Donnation {
 
-    constructor(public name:string,
+    constructor(public id:number,
+                public name:string,
                 public description: string,
                 public imageUrl: string,
                 public active: boolean,
