@@ -14,7 +14,7 @@ export class RegisterComponent implements OnInit {
   registerResponse!: RegisterResponse;
   isSuccessful = false;
   isSignUpFailed = false;
-  errorMessage = ''
+  errorMessage = '';
 
   constructor(private formBuilder: FormBuilder,
               private authService: AuthService) { }
@@ -23,6 +23,7 @@ export class RegisterComponent implements OnInit {
     this.registerGroupForm=this.formBuilder.group({
           username: [''],
           email: [''],
+          role: [''],
           password: ['']
     });
   }
@@ -30,12 +31,14 @@ export class RegisterComponent implements OnInit {
   get username(){ return this.registerGroupForm.get('username');}
   get email(){ return this.registerGroupForm.get('email');}
   get password(){ return this.registerGroupForm.get('password');}
+  get role(){return this.registerGroupForm.get('role');}
 
   onSubmit(){
 
     this.registerResponse = JSON.parse(JSON.stringify(this.registerGroupForm.value));
+    console.log(this.registerResponse);
 
-    this.authService.register(this.registerResponse.username,this.registerResponse.email,this.registerResponse.password).subscribe({
+    this.authService.register(this.registerResponse.username,this.registerResponse.email,this.registerResponse.role,this.registerResponse.password).subscribe({
       next: data => {
         console.log(data);
         this.isSuccessful = true;

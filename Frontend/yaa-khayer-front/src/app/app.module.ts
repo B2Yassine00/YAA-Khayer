@@ -11,8 +11,10 @@ import { DonnationDetailsComponent } from './components/donnation-details/donnat
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AddIndividuComponent } from './components/add-individu/add-individu.component';
 
 const routes: Routes = [
+  { path: 'add-individu', component: AddIndividuComponent },
   { path: 'register-form', component: RegisterComponent },
   { path: 'authenticate-form', component: LoginComponent },
   { path: 'donnations/:id', component: DonnationDetailsComponent },
@@ -31,7 +33,8 @@ const routes: Routes = [
     SidebarnavComponent,
     DonnationDetailsComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AddIndividuComponent
   ],
   
   imports: [
