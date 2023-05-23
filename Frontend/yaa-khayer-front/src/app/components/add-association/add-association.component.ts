@@ -4,16 +4,14 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { RegisterResponse } from 'src/app/entities/register-response';
 import { UtilisateurService } from 'src/app/services/utilisateur.service';
 
-const API_URL="http://localhost:8000/demo/hello";
-
 @Component({
-  selector: 'app-add-individu',
-  templateUrl: './add-individu.component.html',
-  styleUrls: ['./add-individu.component.css']
+  selector: 'app-add-association',
+  templateUrl: './add-association.component.html',
+  styleUrls: ['./add-association.component.css']
 })
-export class AddIndividuComponent implements OnInit {
-  
-  individuGroupForm!: FormGroup;
+export class AddAssociationComponent implements OnInit{
+
+  associationGroupForm!: FormGroup;
   registerResponse!: RegisterResponse;
   isSuccessful = false;
   isSignUpFailed = false;
@@ -24,15 +22,13 @@ export class AddIndividuComponent implements OnInit {
               private formBuilder: FormBuilder){}
   
   ngOnInit(): void {
-    this.individuGroupForm = this.formBuilder.group({
-      nom: [''],
-      prenom: [''],
-      numero: ['']
+  
+    this.associationGroupForm = this.formBuilder.group({
+      justification: ['']
 });
+  
   }
-
-  onSubmit(){
-    
-  }
+  
+  onSubmit(){}
 
 }

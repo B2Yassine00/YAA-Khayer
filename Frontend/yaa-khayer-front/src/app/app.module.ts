@@ -12,8 +12,10 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AddIndividuComponent } from './components/add-individu/add-individu.component';
+import { AddAssociationComponent } from './components/add-association/add-association.component';
 
 const routes: Routes = [
+  { path: 'add-association', component: AddAssociationComponent },
   { path: 'add-individu', component: AddIndividuComponent },
   { path: 'register-form', component: RegisterComponent },
   { path: 'authenticate-form', component: LoginComponent },
@@ -34,7 +36,8 @@ const routes: Routes = [
     DonnationDetailsComponent,
     LoginComponent,
     RegisterComponent,
-    AddIndividuComponent
+    AddIndividuComponent,
+    AddAssociationComponent
   ],
   
   imports: [
