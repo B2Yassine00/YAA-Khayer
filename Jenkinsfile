@@ -10,7 +10,6 @@ pipeline {
         stage('Build backend') {
             steps {
                 dir('backend'){
-                    sh "cd BackEnd-no-context/yaa-khayer"
                     sh "${MAVEN_HOME}/bin/mvn clean package"
                 }
             }
@@ -18,7 +17,6 @@ pipeline {
         stage('Test Backend') {
             steps {
                 dir('Backend'){
-                    sh "cd BackEnd-no-context/yaa-khayer"
                     sh "${MAVEN_HOME}/bin/mvn test"
                 }
             }
