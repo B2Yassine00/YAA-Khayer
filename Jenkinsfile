@@ -9,14 +9,18 @@ pipeline {
     stages {
         stage('Build backend') {
             steps {
-                sh "/BackEnd-no-context/yaa-khayer"
-                sh "${MAVEN_HOME}/bin/mvn clean package"
+                dir('backend'){
+                    sh "cd /BackEnd-no-context/yaa-khayer"
+                    sh "${MAVEN_HOME}/bin/mvn clean package"
+                }
             }
         }
         stage('Test Backend') {
             steps {
-                sh "/BackEnd-no-context/yaa-khayer"
-                sh "${MAVEN_HOME}/bin/mvn test"
+                dir('Backend'){
+                    sh "cd /BackEnd-no-context/yaa-khayer"
+                    sh "${MAVEN_HOME}/bin/mvn test"
+                }
             }
         }
     }
