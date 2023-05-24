@@ -14,6 +14,7 @@ import jakarta.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @Entity
 @Table(
@@ -24,12 +25,6 @@ public class Offert extends Don implements Serializable {
     private String type;
     @ManyToOne
     private Individu individu;
-    @OneToMany(
-            mappedBy = "offert",
-            cascade = {CascadeType.ALL},
-            fetch = FetchType.LAZY
-    )
-    private List<Prendre> prendres;
 
     public Offert() {
     }
@@ -81,11 +76,4 @@ public class Offert extends Don implements Serializable {
         this.individu = individu;
     }
 
-    public List<Prendre> getPrendres() {
-        return this.prendres;
-    }
-
-    public void setPrendres(List<Prendre> prendres) {
-        this.prendres = prendres;
-    }
 }

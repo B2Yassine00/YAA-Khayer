@@ -1,0 +1,129 @@
+<div class="md:col-span-1 md:flex md:justify-end justify-between">
+    <span class="absolute text-white text-4xl top-5 left-4 cursor-pointer" (click)="OnSideChange()">
+        <i class="bi bi-filter-left px-2 bg-gray-900 rounded-md"></i>
+      </span>
+    <!--<nav class="text-right">
+        <div class="flex justify-between items-center">
+            <h1 class="flex justify-center font-bold text-3xl uppercase p-4 text-gray-500 border-gray-100">
+                <a routerLink="/donnations" class="hover:text-gray-700">YAA KHAYER</a>
+            </h1>
+            <button class="px-4 cursor-pointer md:hidden" type="button" (click)="OnChange()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+                  
+                </button>
+        </div>
+        <ul [ngClass]="{'hidden': !showMenu, 'block': showMenu}" class="text-sm mt-6 hidden md:block">
+            <div>
+            <li class="text-gray-600 font-bold py-1">
+                <a routerLink="/donnations" class="px-4 flex justify-end ml-2 border-r-4 border-red-700">
+                    <span>
+                        Home
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ml-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                      </svg>
+                      
+                </a>
+            </li>
+
+            <li class="text-gray-600 font-bold py-1">
+                <a routerLink="/donnations" class="px-4 flex justify-end ml-2 border-r-4 border-white">
+                    <span>
+                        Category
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ml-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6z" />
+                      </svg>
+                      
+                      
+                </a>
+            </li>
+        </div>
+            <div>
+            <li class="text-gray-600 font-bold py-1">
+                <a routerLink="/category/1" class="px-4 flex justify-end ml-2 border-r-4 border-white">
+                    <span>
+                        About
+                    </span>
+                    
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ml-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                  </svg>
+                </a>
+            </li>
+            <li class="text-gray-600 font-bold py-1">
+                    
+                  
+                <a href="/" class="px-4 flex justify-end ml-2 border-r-4 border-white">
+                    <span>
+                        Contact
+                    </span>
+                    
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ml-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                  </svg>
+                </a>
+            </li>
+        </div>
+        </ul>
+
+    </nav>-->
+    <div [ngClass]="{'left-[-300px]': !showMenu}" class="sidebar fixed top-0 bottom-0 lg:left-0 duration-1000
+    p-2 w-[300px] overflow-y-auto text-center bg-gray-200 shadow h-screen">
+    <div class="text-gray-100 text-xl">
+      <a routerLink="/" class="p-2.5 mt-1 flex items-center rounded-md">
+        <!--<i class="bi bi-app-indicator px-2 py-1 bg-blue-600 rounded-md"></i>-->
+        <h1 class="font-bold text-4xl uppercase p-4 text-gray-500 border-gray-100">YAA KHAYER</h1>
+        <!--<i class="bi bi-x ml-20 cursor-pointer lg:hidden" (click)="OnSideChange()"></i>-->
+      </a>
+      <hr class="my-2 text-gray-600">
+
+      <div class="">
+        <div class="p-2.5 mt-3 flex items-center rounded-md 
+        px-4 duration-300 cursor-pointer  bg-gray-50">
+          <i class="bi bi-search text-sm" style="color:rgb(155, 155, 155)"></i>
+            <div>
+                <input #myInput type="text" class="text-[15px] ml-4 w-full bg-transparent text-gray-500 focus:outline-none" placeholder="Search" 
+                (keyup.enter)="doSearch(myInput.value)"
+                />
+            </div>
+        </div>
+
+        <div routerLink="/donnations" class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:text-white hover:bg-gray-600  text-gray-800">
+          <i class="bi bi-house-door-fill" style="color:rgb(155, 155, 155)"></i>
+          <span class="text-[15px] ml-4">Home</span>
+        </div>
+        
+        <hr class="my-4 text-gray-600">
+
+        <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-gray-600 text-gray-800 hover:text-white">
+          <i class="bi bi-chat-left-text-fill" style="color:rgb(155, 155, 155)"></i>
+          <div class="flex justify-between w-full items-center" (click)="OnChange()">
+            <span class="text-[15px] ml-4">Category</span>
+            <span [ngClass]="{'rotate-180': showMenu, 'rotate-0': !showMenu}" class="text-sm transition ease-out duration-500" id="arrow">
+              <i class="bi bi-chevron-down" style="color:gray"></i>
+            </span>
+          </div>
+        </div>
+        <div *ngFor="let tempCategory of donnationCategories" [ngClass]="{'hidden': !showMenu, 'block': showMenu}"  class=" leading-7 text-left text-sm font-thin mt-2 w-4/5 mx-auto">
+                <h1 routerLink="/category/{{tempCategory.id}}" class="cursor-pointer p-2 hover:bg-gray-700 hover:text-white rounded-md mt-1 text-gray-800">{{tempCategory.categoryName}}</h1>
+        </div>
+      </div>
+      
+      <div [ngClass]="{ 'mt-[250px]': !showMenu, 'mt-[100px]': showMenu }">
+      <div routerLink="/authenticate-form" class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:text-white hover:bg-gray-600  text-gray-800">
+        <i class="bi bi-shield-lock" style="color:rgb(155, 155, 155)"></i>
+        <span class="text-[15px] ml-4">Log In</span>
+      </div>
+      <div routerLink="/register-form" class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:text-white hover:bg-gray-600  text-gray-800">
+        <i class="bi bi-box-arrow-in-right" style="color:rgb(155, 155, 155)"></i>
+        <span class="text-[15px] ml-4">Register</span>
+      </div>
+    </div>
+    </div>
+  </div>
+
+</div>
