@@ -30,6 +30,8 @@ pipeline {
             agent any
             steps{
                 dir('BackEnd-no-context/yaa-khayer'){
+                    sh "curl -fsSL https://get.docker.com -o get-docker.sh"
+                    sh "sudo sh get-docker.sh"
                     sh "docker build -t yaa-khayer-backend:latest ."
                 }
             }
