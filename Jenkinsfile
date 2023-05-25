@@ -26,6 +26,20 @@ pipeline {
                 }
             }
         }
+        stage('Build Docker Image'){
+            steps{
+                dir('BackEnd-no-context/yaa-khayer'){
+                    sh "docker build -t yaa-khayer-backend:latest ."
+                }
+            }
+        }
+        /*stage{
+            steps{
+               withCredentials([usernamePassword(credentialsId: 'DOCKERHUBCREDENTIALS', passwordVariable: 'DOCKERHUB_PASSWORD', usernameVariable: 'DOCKERHUB_USERNAME')]) {
+
+}
+            }
+        }*/
         stage('Test the access to front repository'){
             steps {
                 dir('Frontend/yaa-khayer-front'){
