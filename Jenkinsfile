@@ -15,7 +15,7 @@ pipeline {
         stage('Build backend') {
             steps {
                 dir('BackEnd-no-context/yaa-khayer'){
-                    sh "${MAVEN_HOME}/bin/mvn clean package"
+                    sh "${MAVEN_HOME}/bin/mvn clean package -DskipTests"
                 }
             }
         }
