@@ -4,7 +4,6 @@ pipeline {
     tools{
         maven 'maven'
         jdk 'Java17'
-        'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'docker'
     }
     
     triggers {
