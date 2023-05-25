@@ -26,5 +26,12 @@ pipeline {
                 }
             }
         }
+        stage('Test the access to front repository'){
+            steps {
+                dir('Frontend/yaa-khayer-front'){
+                    sh "ng serve --port=4300"
+                }
+            }
+        }
     }
 }
