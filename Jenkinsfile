@@ -27,7 +27,6 @@ pipeline {
             }
         }
         stage('Build Docker Image'){
-            agent any
             steps{
                 dir('BackEnd-no-context/yaa-khayer'){
                     sh "docker build -t yaa-khayer-backend:latest ."
