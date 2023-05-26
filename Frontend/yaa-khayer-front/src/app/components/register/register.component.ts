@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { RegisterResponse } from 'src/app/entities/register-response';
 import { AuthService } from 'src/app/services/auth.service';
+import { TokenStorageService } from 'src/app/services/token-storage.service';
 
 @Component({
   selector: 'app-register',
@@ -19,7 +20,8 @@ export class RegisterComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
               private authService: AuthService,
-              private router: Router) { }
+              private router: Router,
+              private tokenStorage: TokenStorageService) { }
   
   ngOnInit(): void {
     this.registerGroupForm=this.formBuilder.group({
@@ -44,7 +46,10 @@ export class RegisterComponent implements OnInit {
 
           this.authService.register(this.registerResponse.username,this.registerResponse.email,this.registerResponse.role,this.registerResponse.password).subscribe({
             next: data => {
-              console.log(data);
+              console.log(data);              
+              this.tokenStorage.saveToken(data.token);
+              this.tokenStorage.saveUser(data);
+              console.log(this.tokenStorage.getUser().id)
               this.isSuccessful = true;
               this.isSignUpFailed = false;
             },
