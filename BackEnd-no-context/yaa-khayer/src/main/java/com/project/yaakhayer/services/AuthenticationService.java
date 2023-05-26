@@ -31,13 +31,14 @@ public class AuthenticationService {
                 .password(passwordEncoder.encode(request.getPassword()))
                 .build();
 
-        repository.save(user);
+        Utilisateur utilisateur=repository.save(user);
 
         var jwtToken = jwtService.generateToken(user);
         return AuthenticationResponse.builder()
                 .token(jwtToken)
                 .username(user.getUsername())
                 .role(user.getRole())
+                .id(utilisateur.getId())
                 .build();
     }
 
@@ -55,6 +56,7 @@ public class AuthenticationService {
                 .token(jwtToken)
                 .username(user.getUsername())
                 .role(user.getRole())
+                .id(user.getId())
                 .build();
     }
 }
