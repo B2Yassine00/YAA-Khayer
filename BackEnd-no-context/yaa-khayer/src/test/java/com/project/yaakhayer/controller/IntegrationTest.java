@@ -1,13 +1,13 @@
 package com.project.yaakhayer.controller;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.project.yaakhayer.dto.*;
+import com.project.yaakhayer.dto.AuthenticationRequest;
+import com.project.yaakhayer.dto.AuthenticationResponse;
+import com.project.yaakhayer.dto.SignInRequest;
 import com.project.yaakhayer.entity.Role;
 import com.project.yaakhayer.services.AuthenticationService;
 import com.project.yaakhayer.services.RegistrationService;
 import net.minidev.json.JSONObject;
-import org.aspectj.lang.annotation.Before;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -16,25 +16,23 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
-import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import java.util.Random;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @AutoConfigureMockMvc
 @SpringBootTest
-class RegisterControllerTest {
-
+public class IntegrationTest {
     @Autowired
     private MockMvc mockMvc;
     @Autowired
     RegistrationService regservice;
-
     @Autowired
     AuthenticationService authservice;
     private String token,tokenasso;
@@ -43,8 +41,9 @@ class RegisterControllerTest {
     Long id,idasso;
     String urlsaveindividu="http://localhost:8000/api/register/add-individu";
     String urlsaveasso="http://localhost:8000/api/register/add-association";
-    @BeforeAll
-    public void setup(){
+
+    /******sub inscription***/
+    public void subsignUp(){
         Random random = new Random();
         int randomint = random.nextInt(10000);
         username="test"+randomint;
@@ -65,33 +64,12 @@ class RegisterControllerTest {
         AuthenticationResponse authenticationResponseasso=authservice.signin(signInRequestasso);
         idasso=authenticationResponseasso.getId();
         tokenasso=authenticationResponseasso.getToken();
-
     }
 
     @Test
-    void testToken(){
-        AuthenticationRequest authenticationRequest=new AuthenticationRequest(username,password);
-        AuthenticationResponse authenticationResponse=authservice.authenticate(authenticationRequest);
-        String testtoken=authenticationResponse.getToken();
-        assertNotEquals(token,testtoken);
-    }
-    @Test
-    void testTokenasso(){
-        AuthenticationRequest authenticationRequest=new AuthenticationRequest(usernameasso,passwordasso);
-        AuthenticationResponse authenticationResponse=authservice.authenticate(authenticationRequest);
-        String testtoken=authenticationResponse.getToken();
-        assertNotEquals(tokenasso,testtoken);
-    }
-
-
-
-
-    @Test
-    @WithMockUser
-    void saveIndividu() throws Exception {
-     /*
-        IndividuRequest individuRequest=new IndividuRequest(new UtilisateurRequest(16),prenom,nom,numero );
-        String requestBody=objectMapper.writeValueAsString(individuRequest);*/
+    public void fullScenario() throws Exception {
+        subsignUp();
+        /******* Continue signup for individu********/
         JSONObject request = new JSONObject();
         JSONObject utilisateur = new JSONObject();
         int id_individu= id.intValue();
@@ -107,16 +85,12 @@ class RegisterControllerTest {
                         .content(request.toString()))
                 .andExpect(MockMvcResultMatchers.status().isOk());
 
-    }
-
-    @Test
-    void saveAssociation() throws Exception {
-
-        JSONObject request = new JSONObject();
-        JSONObject utilisateur = new JSONObject();
-        int id_individu= idasso.intValue();
-        utilisateur.put("id",id_individu);
-        request.put("utilisateur",utilisateur);
+        /*******Continue signup for association********/
+        request = new JSONObject();
+        JSONObject association = new JSONObject();
+        int id_association= idasso.intValue();
+        association.put("id",id_association);
+        request.put("utilisateur",association);
         request.put("justification","Pas de jusftification");
 
         mockMvc.perform(MockMvcRequestBuilders.post(urlsaveasso)
@@ -125,5 +99,18 @@ class RegisterControllerTest {
                         .content(request.toString()))
                 .andExpect(MockMvcResultMatchers.status().isOk());
 
+        /**** authentification of individu ***/
+
+        AuthenticationRequest authenticationRequest1=new AuthenticationRequest(username,password);
+        AuthenticationResponse authenticationResponse1=authservice.authenticate(authenticationRequest1);
+        assertEquals(authenticationResponse1.getId(),id_individu);
+        /**** authentification of association ***/
+
+        AuthenticationRequest authenticationRequest2=new AuthenticationRequest(usernameasso,passwordasso);
+        AuthenticationResponse authenticationResponse2=authservice.authenticate(authenticationRequest2);
+        assertEquals(authenticationResponse2.getId(),id_association);
     }
-}
+    }
+
+
+
