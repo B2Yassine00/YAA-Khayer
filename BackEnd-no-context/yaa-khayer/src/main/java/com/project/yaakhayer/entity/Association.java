@@ -25,4 +25,10 @@ public class Association {
     @OneToOne
     @JoinColumn(name = "id_utilisateur_associe")
     private Utilisateur utilisateur;
+
+
+    public Association(String justification, Utilisateur utilisateur){
+        this.justification = justification;
+        this.utilisateur = utilisateur;
+    }
 }

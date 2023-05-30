@@ -36,7 +36,10 @@ public class RegistrationService {
     }
 
     public Association saveAssoc(Association association){
-        return associationRepository.save(association);
+
+        Optional<Utilisateur> user = utilisateurRepository.findById(association.getUtilisateur().getId());
+        Association tempAssoc = new Association(association.getJustification(),user.get());
+        return associationRepository.save(tempAssoc);
     }
 
 }

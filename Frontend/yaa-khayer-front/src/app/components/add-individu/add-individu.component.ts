@@ -50,6 +50,7 @@ export class AddIndividuComponent implements OnInit {
         },
         
         error: err => {
+          console.log("not returned");
           this.errorMessage = err.error.message;
           this.isSignUpFailed = true;         
         }
