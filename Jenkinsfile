@@ -10,7 +10,7 @@ pipeline {
         stage('Build backend') {
             steps {
                 dir('BackEnd-no-context/yaa-khayer'){
-                    sh "mvnw clean install"
+                    bat "mvn clean install"
                 }
             }
         }
