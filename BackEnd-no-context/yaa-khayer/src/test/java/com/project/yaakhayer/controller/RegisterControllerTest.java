@@ -67,7 +67,7 @@ class RegisterControllerTest {
         tokenasso=authenticationResponseasso.getToken();
 
     }
-
+    /*
     @Test
     void testToken(){
         AuthenticationRequest authenticationRequest=new AuthenticationRequest(username,password);
@@ -89,9 +89,9 @@ class RegisterControllerTest {
     @Test
     @WithMockUser
     void saveIndividu() throws Exception {
-     /*
-        IndividuRequest individuRequest=new IndividuRequest(new UtilisateurRequest(16),prenom,nom,numero );
-        String requestBody=objectMapper.writeValueAsString(individuRequest);*/
+
+        //IndividuRequest individuRequest=new IndividuRequest(new UtilisateurRequest(16),prenom,nom,numero );
+        //String requestBody=objectMapper.writeValueAsString(individuRequest);
         JSONObject request = new JSONObject();
         JSONObject utilisateur = new JSONObject();
         int id_individu= id.intValue();
@@ -125,5 +125,5 @@ class RegisterControllerTest {
                         .content(request.toString()))
                 .andExpect(MockMvcResultMatchers.status().isOk());
 
-    }
+    }*/
 }

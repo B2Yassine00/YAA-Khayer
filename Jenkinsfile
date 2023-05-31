@@ -10,21 +10,21 @@ pipeline {
         stage('Build backend') {
             steps {
                 dir('BackEnd-no-context/yaa-khayer'){
-                    bat "mvn clean install"
+                    bat "mvn clean install -DskipTests"
                 }
             }
         }
         stage('Test Backend') {
             steps {
                 dir('BackEnd-no-context/yaa-khayer'){
-                    sh "${MAVEN_HOME}/bin/mvn test"
+                    bat "mvn test"
                 }
             }
         }
         stage('Build Docker Image'){
             steps{
                 dir('BackEnd-no-context/yaa-khayer'){
-                    sh "docker build -t yaa-khayer-backend:latest ."
+                    bat "docker build -t yaa-khayer-backend:latest ."
                 }
             }
         }
