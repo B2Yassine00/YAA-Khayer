@@ -38,7 +38,7 @@ pipeline {
         stage('Test the access to front repository'){
             steps {
                 dir('Frontend/yaa-khayer-front'){
-                    sh "cat file.txt"
+                    bat "cat file.txt"
                 }
             }
         }
