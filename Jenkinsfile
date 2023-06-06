@@ -28,13 +28,15 @@ pipeline {
                 }
             }
         }
-        /*stage{
+        stage{
             steps{
                withCredentials([usernamePassword(credentialsId: 'DOCKERHUBCREDENTIALS', passwordVariable: 'DOCKERHUB_PASSWORD', usernameVariable: 'DOCKERHUB_USERNAME')]) {
+                    bat "docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD"
 
-}
+                    bat "docker push yaa-khayer-backend:latest"
+                }
             }
-        }*/
+        }
         stage('Test the access to front repository'){
             steps {
                 dir('Frontend/yaa-khayer-front'){
