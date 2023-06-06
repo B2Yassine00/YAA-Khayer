@@ -32,8 +32,7 @@ pipeline {
             steps{
                withCredentials([usernamePassword(credentialsId: 'DOCKERHUBCREDENTIALS', passwordVariable: 'DOCKERHUB_PASSWORD', usernameVariable: 'DOCKERHUB_USERNAME')]) {
                     bat "docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD"
-
-                    bat "docker push yaa-khayer-backend:latest"
+                    bat "docker push $DOCKERHUB_USERNAME/yaa-khayer-backend:latest"
                 }
             }
         }
@@ -64,8 +63,7 @@ pipeline {
             steps{
                withCredentials([usernamePassword(credentialsId: 'DOCKERHUBCREDENTIALS', passwordVariable: 'DOCKERHUB_PASSWORD', usernameVariable: 'DOCKERHUB_USERNAME')]) {
                     bat "docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD"
-
-                    bat "docker push yaa-khayer-frontend:latest"
+                    bat "docker push $DOCKERHUB_USERNAME/yaa-khayer-frontend:latest"
                 }
             }
         }
