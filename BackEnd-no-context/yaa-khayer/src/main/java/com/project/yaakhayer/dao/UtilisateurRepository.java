@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.Optional;
 
-@CrossOrigin("http://localhost:4300")
+@CrossOrigin("http://localhost:4200")
 public interface UtilisateurRepository extends JpaRepository<Utilisateur, Long> {
 
 

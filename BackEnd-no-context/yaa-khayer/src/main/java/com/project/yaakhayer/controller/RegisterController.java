@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("api/register")
 @RequiredArgsConstructor
-@CrossOrigin("http://localhost:4300")
+@CrossOrigin("http://localhost:4200")
 public class RegisterController {
 
     private RegistrationService service;

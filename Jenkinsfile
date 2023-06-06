@@ -37,10 +37,35 @@ pipeline {
                 }
             }
         }
-        stage('Test the access to front repository'){
+        stage('Build Frontend'){
             steps {
                 dir('Frontend/yaa-khayer-front'){
-                    bat "cat file.txt"
+                    bat "npm install"
+                    bat "npm build"
+                }
+            }
+        }
+        stage('Deploy NGINX'){
+            steps{
+                dir('Frontend/yaa-khayer-front'){
+                    bat 'docker pull nginx:1.21.3'
+                    bat 'docker run -d -p 80:80 --name my-nginx-container -v %cd%:/usr/share/nginx/html nginx:1.21.3'
+                }
+            }
+        }
+        stage('Build Front Docker Image'){
+            steps{
+                dir('Frontend/yaa-khayer-front'){
+                    bat "docker build -t yaa-khayer-frontend:latest ."
+                }
+            }
+        }
+        stage('Push Frontend Image'){
+            steps{
+               withCredentials([usernamePassword(credentialsId: 'DOCKERHUBCREDENTIALS', passwordVariable: 'DOCKERHUB_PASSWORD', usernameVariable: 'DOCKERHUB_USERNAME')]) {
+                    bat "docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD"
+
+                    bat "docker push yaa-khayer-frontend:latest"
                 }
             }
         }
