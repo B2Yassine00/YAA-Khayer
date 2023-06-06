@@ -24,7 +24,7 @@ pipeline {
         stage('Build Docker Image'){
             steps{
                 dir('BackEnd-no-context/yaa-khayer'){
-                    bat "docker build -t yaa-khayer-backend:latest ."
+                    bat "docker build -t byassine00/yaa-khayer-backend:latest ."
                 }
             }
         }
@@ -32,7 +32,7 @@ pipeline {
             steps{
                withCredentials([usernamePassword(credentialsId: 'DOCKERHUBCREDENTIALS', passwordVariable: 'DOCKERHUB_PASSWORD', usernameVariable: 'DOCKERHUB_USERNAME')]) {
                     bat "docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD"
-                    bat "docker push $DOCKERHUB_USERNAME/yaa-khayer-backend:latest"
+                    bat "docker push byassine00/yaa-khayer-backend:latest"
                 }
             }
         }
@@ -55,7 +55,7 @@ pipeline {
         stage('Build Front Docker Image'){
             steps{
                 dir('Frontend/yaa-khayer-front'){
-                    bat "docker build -t yaa-khayer-frontend:latest ."
+                    bat "docker build -t byassine00/yaa-khayer-frontend:latest ."
                 }
             }
         }
@@ -63,7 +63,7 @@ pipeline {
             steps{
                withCredentials([usernamePassword(credentialsId: 'DOCKERHUBCREDENTIALS', passwordVariable: 'DOCKERHUB_PASSWORD', usernameVariable: 'DOCKERHUB_USERNAME')]) {
                     bat "docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD"
-                    bat "docker push $DOCKERHUB_USERNAME/yaa-khayer-frontend:latest"
+                    bat "docker push byassine00/yaa-khayer-frontend:latest"
                 }
             }
         }
