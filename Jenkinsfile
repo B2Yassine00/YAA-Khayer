@@ -28,7 +28,7 @@ pipeline {
                 }
             }
         }
-        stage{
+        stage('Push Backend Image'){
             steps{
                withCredentials([usernamePassword(credentialsId: 'DOCKERHUBCREDENTIALS', passwordVariable: 'DOCKERHUB_PASSWORD', usernameVariable: 'DOCKERHUB_USERNAME')]) {
                     bat "docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD"
