@@ -12,7 +12,7 @@ RUN npm run build --prod
 CMD ["npm", "start"]
 
 FROM nginx
-COPY ./dist/Frontend/yaa-khayer-front /usr/share/nginx/html
+COPY ./ /usr/share/nginx/html
 
 COPY nginx.conf /etc/nginx/nginx.conf
 
