@@ -41,7 +41,7 @@ pipeline {
             steps {
                 dir('Frontend/yaa-khayer-front'){
                     bat "npm install"
-                    bat "npm build"
+                    bat "npm run build"
                 }
             }
         }
