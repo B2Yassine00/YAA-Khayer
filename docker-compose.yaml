@@ -1,0 +1,21 @@
+version: "3"
+services:
+  backend:
+    build:
+      context: ./BackEnd-no-context/yaa-khayer
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    networks:
+      - app
+  frontend:
+    build:
+      context: ./Frontend/yaa-khayer-front
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
+    networks:
+      - app
+networks:
+  app:
+    driver: bridge

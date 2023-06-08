@@ -5,10 +5,6 @@ pipeline {
         maven 'maven'
     }
     
-    triggers {
-        pollSCM '* * * * *'
-    }
-
     stages {
         stage('Build backend') {
             steps {
@@ -70,6 +66,11 @@ pipeline {
                     bat "docker pull byassine00/yaa-khayer-frontend:latest"
                     bat "docker push byassine00/yaa-khayer-frontend:latest"
                 }
+            }
+        }
+        stage('Docker Compose'){
+            steps{
+                bat "docker-compose up --build -d"
             }
         }
     }
