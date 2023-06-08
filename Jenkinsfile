@@ -48,7 +48,7 @@ pipeline {
             steps{
                 dir('Frontend/yaa-khayer-front'){
                     bat 'docker pull nginx:1.21.3'
-                    bat 'docker run -d -p 80:80 --name my-nginx-container -v %cd%:/usr/share/nginx/html nginx:1.21.3'
+                    bat 'docker run -d -p 80:80 --name my-nginx-container-v2 -v %cd%:/usr/share/nginx/html nginx:1.21.3'
                 }
             }
         }
