@@ -29,12 +29,32 @@ export class AuthService {
     }, httpOptions);
   }
 
-  register(username: string, email: string,role: string ,password: string): Observable<any> {
-    return this.httpClient.post(AUTH_API + 'auth/signin', {
+  registerIndividu(username: string,
+                  email: string,
+                  role: string ,
+                  password: string,
+                  firstName:string,
+                  lastName:string,
+                  numero:number): Observable<any> {
+    return this.httpClient.post(AUTH_API + 'register/add-individu', {
       username,
       email,
       role,
-      password
+      password,
+      firstName,
+      lastName,
+      numero
+    }, httpOptions);
+  }
+
+  registerAssociation(username: string, email: string,
+                      role: string ,password: string,justification:string): Observable<any> {
+    return this.httpClient.post(AUTH_API + 'register/add-association', {
+      username,
+      email,
+      role,
+      password,
+      justification
     }, httpOptions);
   }
   addindiv(utilisateur: Utilisateur, nom:string,prenom:string,numero:string): Observable<any> {
